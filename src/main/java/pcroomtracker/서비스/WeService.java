@@ -1,12 +1,12 @@
-package org.example.hashi.서비스;
+package pcroomtracker.서비스;
 
+import pcroomtracker.도메인.Admin;
+import pcroomtracker.도메인.PcRoom;
+import pcroomtracker.레포지토리.AdminRepository;
+import pcroomtracker.레포지토리.IpRepository;
+import pcroomtracker.레포지토리.PcRoomRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.example.hashi.도메인.Admin;
-import org.example.hashi.도메인.PcRoom;
-import org.example.hashi.레포지토리.AdminRepository;
-import org.example.hashi.레포지토리.IpRepository;
-import org.example.hashi.레포지토리.PcRoomRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

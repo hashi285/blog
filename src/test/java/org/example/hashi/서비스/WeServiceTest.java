@@ -1,11 +1,10 @@
 package org.example.hashi.서비스;
 
-import org.example.hashi.도메인.PcRoom;
+import pcroomtracker.서비스.WeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class WeServiceTest {
     @Autowired private WeService service;

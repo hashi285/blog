@@ -1,9 +1,9 @@
-package org.example.hashi.컨트롤러;
+package pcroomtracker.컨트롤러;
 
 import lombok.RequiredArgsConstructor;
-import org.example.hashi.Calculation;
-import org.example.hashi.도메인.PcRoom;
-import org.example.hashi.서비스.WeService;
+import pcroomtracker.Calculation;
+import pcroomtracker.도메인.PcRoom;
+import pcroomtracker.서비스.WeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

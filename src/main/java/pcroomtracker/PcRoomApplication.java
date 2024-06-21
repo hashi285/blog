@@ -1,13 +1,13 @@
-package org.example.hashi;
+package pcroomtracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HashiApplication {
+public class PcRoomApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HashiApplication.class, args);
+        SpringApplication.run(PcRoomApplication.class, args);
     }
 
 }

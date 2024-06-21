@@ -1,4 +1,4 @@
-package org.example.hashi.도메인;
+package pcroomtracker.도메인;
 
 
 import lombok.*;
