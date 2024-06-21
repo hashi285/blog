@@ -1,4 +1,4 @@
-package org.example.hashi.서비스;
+package prcoomtracker.서비스;
 
 import pcroomtracker.서비스.WeService;
 import org.junit.jupiter.api.Test;

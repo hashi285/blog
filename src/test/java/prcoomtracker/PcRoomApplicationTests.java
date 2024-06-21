@@ -1,4 +1,4 @@
-package org.example.hashi;
+package prcoomtracker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
