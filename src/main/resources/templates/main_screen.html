@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Make id</title>
+    <title>Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,8 +15,8 @@
 
         .login-container {
             background-color: white;
-            padding: 150px;
-            border-radius: 50px;
+            padding: 300px;
+            border-radius: 100px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -30,7 +30,7 @@
 
         .login-container label {
             display: block;
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
 
         .login-container input {
@@ -59,23 +59,37 @@
 </head>
 <body>
 <div class="login-container">
-    <h1>Create an account
-    </h1>
-    <form th:action="@{/login/2}" method="post" th:object="${admin}">
+    <form th:action="@{/login/1}" method="post" th:object="${admin}">
         <div>
-            <label for="name">Username:</label>
-            <input type="text" id="name" th:field="*{name}" required/>
+            <label for="username">Username:</label>
+            <input type="text" id="username" th:field="*{name}" required/>
         </div>
         <div>
-            <label for="password">Password:</label>
-            <input type="text" id="password" th:field="*{password}" required/>
+            <button type="submit">Login</button>
         </div>
+<table>
+    <tr>
+        <th><button type="submit">PCRoom</button></th>
+        <th>in use/all</th>
+        <th>Percent</th>
+    </tr>
+    <tr>
+        <th>asd</th>
+        <th>asd</th>
+        <th>asd</th>
+
+    </tr>
+    <div>
+        <label>Username:</label>
+
+    </div>
+
+</table>
         <div>
-            <button type="submit">Create an account
-            </button>
+            <button type="submit">Login</button>
         </div>
+
     </form>
-    <a th:href="@{/login/1}">return</a>
 </div>
 </body>
 </html>

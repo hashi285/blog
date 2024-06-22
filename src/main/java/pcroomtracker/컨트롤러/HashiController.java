@@ -22,14 +22,15 @@ public class HashiController {
         model.addAttribute("calculation", new Calculation());
         return "head";
     }
+
     @PostMapping("/1")
-    public String hello(@ModelAttribute Calculation calculation, Model model){
+    public String hello(@ModelAttribute Calculation calculation, Model model) {
         InetAddress pingcheck = null;
         try {
             pingcheck = InetAddress.getByName(calculation.getNumber1());
             boolean isAlive = pingcheck.isReachable(5000);
             System.out.println(isAlive + "-----------------------------------------------+");
-            model.addAttribute("result" , isAlive);
+            model.addAttribute("result", isAlive);
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -37,11 +38,6 @@ public class HashiController {
         }
         return "result";
     }
-
-
-
-
-
 
 
     @GetMapping("/all")
@@ -52,43 +48,23 @@ public class HashiController {
 
 
 
-    @GetMapping(value = "/{id}")
-    public PcRoom getTodo(@PathVariable("id") Long id) {
-        return weService.getip(id);
-    }
-
-
-
-
-
-
-
-
 
     //---------------------------------------------------------------------------------------------------여기가 진짜다
 
-    @GetMapping("/2") //로그인 화면
-    public String login(Model model) {
-        model.addAttribute("calculation", new Calculation());
-        return "login";
-    }
-
-    @PostMapping("/2")
-    public String login1(Model model) {
-        return "login";
+    @GetMapping("/300")
+    public String mainscreen(Model model) {
+        model.addAttribute("hashi", new Object());
+        return "main_screen";
     }
 
 
-    @GetMapping("/3")
-    public String login3(Model model){ // 회원가입 화면
-        return "make";
+
+    //---------------------------------------------------
+
+    @GetMapping("/1") // 현재 사용량 테이블로 나타내기
+    public String m1(Model model) {
+        weService.findAll();
+        return "main_screen";
     }
-
-    @PostMapping("/3") // 정보 입력 후 로그인 화면으로 이동
-    public String login4(Model model) {
-        return "redirect:/2";
-    }
-
-
 
 }
