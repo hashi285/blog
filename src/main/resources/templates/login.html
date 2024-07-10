@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/default-layout}"
+      layout:fragment="Content"
+>
 <head>
     <title>Login</title>
     <style>
@@ -60,15 +65,15 @@
 <body>
 <div class="login-container">
     <h1>Login</h1>
-    <form th:action="@{/login/1}" method="post" th:object="${admin}">
+    <form th:action="@{/login}" method="post" th:object="${admin}">
         <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" th:field="*{name}" required/>
-        </div>
+
+            <input type="name" class="form-control form-control-user"
+                   id="name" name="name" placeholder="username" required>        </div>
+
         <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" th:field="*{password}" required/>
-        </div>
+            <input type="password" class="form-control form-control-user"
+                   id="password" name="password" placeholder="password" required>        </div>
         <div>
             <button type="submit">Login</button>
         </div>
