@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/default-layout}"
+      layout:fragment="Content"
+<head>
+    <title>Make id</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 150px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h1 {
+            margin-top: 0;
+        }
+
+        .login-container div {
+            margin-bottom: 8px;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6e3fa8;
+            color: #eaeaec;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: rgb(255, 255, 255);
+            color: #6e3fa8;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Create an account
+    </h1>
+    <form action="/make" method="post">
+
+        <div>
+        <input type="text" id="username" name="username"placeholder="id....." required><br><br>
+        </div>
+        <div>
+        <input type="password" id="password" name="password"placeholder="password....." required><br><br>
+        </div>
+        <div>
+        <input type="text" id="name" name="name"placeholder="name" required><br><br>
+        </div>
+        <div>
+        <input type="text" id="email" name="email" placeholder="email" required><br><br>
+        </div>
+        <div>
+        <button type="submit">Create Account</button>
+        </div>
+    </form>
+    <div>
+        <form action="/login/2" method="get">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
