@@ -65,11 +65,11 @@
 <body>
 <div class="login-container">
     <h1>Login</h1>
-    <form th:action="@{/login}" method="post" th:object="${admin}">
+    <form action="/login" method="post">
         <div>
 
-            <input type="name" class="form-control form-control-user"
-                   id="name" name="name" placeholder="username" required>        </div>
+            <input type="text" class="form-control form-control-user"
+                   id="username" name="username" placeholder="username" required>        </div>
 
         <div>
             <input type="password" class="form-control form-control-user"
@@ -80,7 +80,7 @@
 
     </form>
         <div>
-            <form action="/login/2" method="get">
+            <form action="/make" method="get">
                 <button type="submit">Create an account</button>
             </form>
         </div>

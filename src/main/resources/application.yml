@@ -1,6 +1,6 @@
 spring:
   application:
-    name: securityexam
+    name: hashi
 
   security:
     oauth2:
