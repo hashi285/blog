@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>친구 상세정보 페이지</title>
+</head>
+<body>
+<h2 th:text="${post.user}">친구이름</h2>
+<div>
+    <strong>Title : </strong> <span th:text="${post.title}">title
+</span>
+
+    <br>
+
+    <strong>내용 : </strong> <span th:text="${post.getContent()}">title
+    </span>
+
+</div>
+<a th:href="@{/list}">list</a>
+<a th:href = "@{/edit/{id}}">수정</a>
+
+<form th:action="@{/title}" th:object="${comment}" method="post" id="blogPostForm">
+
+    <div class="form-group">
+        <div class="form-group">
+            <label for="comment">comment</label>
+            <input type="text" id="comment" />
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit">Add comment</button>
+    </div>
+    </form>
+<div>
+    <div class="blog-grid">
+        <div th:each="post : ${posts}" class="blog-post">
+            <h2>
+                <a th:href="@{/title/{id}(id=${post.id})}" th:text="${post.title}"></a>
+            </h2>
+            <p>Posted by <a th:href="@{/posts/check/{id}(id=${post.id})}" th:text="${post.getUser()}"></a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
